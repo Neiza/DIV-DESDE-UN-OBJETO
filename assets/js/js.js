@@ -9,7 +9,12 @@
 var mostrar=document.getElementById("show");
 var all = "";
 arr.forEach(function(e){
-  all+= "<div><ul><li>Nombre: "    + e.Nombre      + "</li>"  +
+  var div =  document.createElement("div")
+  var p = document.createElement("p");
+  div.appendChild(p);
+  show.appendChild(div);
+
+  all += "<div><ul><li>Nombre: "    + e.Nombre      + "</li>"  +
                 "<li>Apellido: "   + e.Apellido    + "</li>"  +
                 "<li>Rol: "        + e.Rol         + "</li>"  +
                 "<li>Cumpleaños: " + e.Cumpleanios + "</li></ul></div>";
